@@ -8,7 +8,7 @@ function value_y(data){
    var y;
    var num=[];
    num = data.split(" ")
-   y=(Number(data[0])*Number(data[1]))+Number(data[2])
+   y=(Number(data[0])*Number(data[2]))+Number(data[1])
     
 console.log(y)
 }
