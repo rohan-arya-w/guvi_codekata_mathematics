@@ -26,3 +26,7 @@ function repeating(data){
    if(temp.length!==0){
   console.log("yes")
    }
+   else{
+       console.log("no")
+   }
+}
