@@ -2,15 +2,21 @@ const readline = require('readline')
 const inp = readline.createInterface({ input:process.stdin})
 
 
-inp.on("line", (data) => {console.log(hextodeci(data))});
+inp.on("line", (n) => {permutation(n)});
 
-function hextodeci(data) {
-var deci =0 , digitValue;
-data = data.toLowerCase();
 
-for (var i = 0; i < data.length; i++) {
-    digitValue = '0123456789abcdefgh'.indexOf(data[i]);
-    deci = deci * 16 + digitValue;
+function permutation(n) {
+var num=[];
+var fact1=1;
+var fact2=1;
+num = n.split(" ").map(n=>Number(n))
+for (var i = 2; i <= num[0]; i++){ 
+     fact1 = fact1 * i; 
 }
-return deci;
+for (var j = 2; j <= (num[0]-num[1]); j++){ 
+     fact2 = fact2 * j; 
+}
+
+ 
+console.log(fact1/fact2)
 }
